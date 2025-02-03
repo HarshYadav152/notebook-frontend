@@ -8,7 +8,7 @@ export default function Signup(props) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { name, username, email, password } = credentials;
-        const response = await fetch(`${import.meta.env.VITE_API_HOST}/notebook/auth/createuser`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/notebook/auth/createuser`, {
             method: 'POST', // or 'POST', 'PUT', 'DELETE', etc.
             headers: {
                 'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ export default function Login(props) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`${import.meta.env.VITE_API_HOST}/notebook/auth/loginuser`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/notebook/auth/loginuser`, {
             method: 'POST', // or 'POST', 'PUT', 'DELETE', etc.
             headers: {
                 'Content-Type': 'application/json'

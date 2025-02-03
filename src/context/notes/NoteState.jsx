@@ -8,7 +8,7 @@ const NoteState = (props) => {
   //Fetch all notes
   const getNotes = async () => {
     // API call remaining
-    const response = await fetch(`${import.meta.env.VITE_API_HOST}/notebook/notes/fetchallnote`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/notebook/notes/fetchallnote`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const NoteState = (props) => {
   // Add note
   const addNote = async (title, description, tag) => {
     // API call remaining
-    const response = await fetch(`${import.meta.env.VITE_API_HOST}/notebook/notes/addnote`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/notebook/notes/addnote`, {
       method: 'POST', // or 'POST', 'PUT', 'DELETE', etc.
       headers: {
         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const NoteState = (props) => {
   // Delete note
   const deleteNote = async(id) => {
     // API call remaining
-    const response = await fetch(`${import.meta.env.VITE_API_HOST}/notebook/notes/deletenote/${id}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/notebook/notes/deletenote/${id}`, {
       method: 'DELETE', // or 'POST', 'PUT', 'DELETE', etc.
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const NoteState = (props) => {
   // Edit note 
   const editNote = async (id, title, description, tag) => {
     // api call 
-    const response = await fetch(`${import.meta.env.VITE_API_HOST}/notebook/notes/updatenote/${id}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/notebook/notes/updatenote/${id}`, {
       method: 'PUT', // or 'POST', 'PUT', 'DELETE', etc.
       headers: {
         'Content-Type': 'application/json',
